@@ -593,7 +593,7 @@ span.ship-score {
   background-color: #0c0d13;
   border: 10px solid transparent; /* Définit une bordure sur laquelle l'image sera appliquée */
   border-image: url("../img/border.png"); /* Remplacez 'votre-image.png' par le chemin de votre image */
-  border-image-slice: 50;
+  border-image-slice: 58;
   padding: 10px;
 }
 
