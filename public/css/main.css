@@ -1,23 +1,52 @@
 /* Fonts */
 @font-face {
   font-family: "Ninja-title";
-  src: url("../fonts/title/KATANA.ttf");
+  src: url("../fonts/title/Counter Stream.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Bankai-text";
-  src: url("../fonts/span-label/Bankai.otf");
+  src: url("../fonts/span-label/Exo2.otf");
   font-display: swap;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+  /* Supprimer les flèches des barres de défilement */
+}
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+*::-webkit-scrollbar-button {
+  display: none;
 }
 
 /* Text Styling */
 
 body {
   min-height: 100vh;
+  min-width: 100vw;
   background-image: url("../img/wall.jpg");
+  background-size: cover; /* Couvre toute la zone sans déformation */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Empêche la répétition */
   overflow-x: hidden; /* Cache le scroll horizontal */
-  overflow-y: scroll; /* Force le scroll vertical */
+  overflow-y: auto; /* Permet le scroll vertical seulement si nécessaire */
+  margin: 0; /* Supprime les marges par défaut */
 }
 
 /* Pour mobile (écrans plus petits) */
@@ -449,7 +478,7 @@ body {
 h1,
 h2 {
   font-weight: 600 !important;
-  background-image: linear-gradient(to left, #a06e6e, #ffffff) !important;
+  background-image: linear-gradient(to left, #b1b1b1, #ffffff) !important;
   color: transparent !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
@@ -469,9 +498,10 @@ h3,
 h4,
 h5,
 b,
-.btn-outline-danger {
+.btn-outline-light {
   font-family: "Ninja-title", sans-serif;
   font-weight: lighter;
+  letter-spacing: 3px;
 }
 
 .adonys {
@@ -511,7 +541,7 @@ label {
 /* System List Styling */
 
 .system-list-item:hover {
-  border-color: rgb(218, 124, 124);
+  border-color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
@@ -524,7 +554,7 @@ label {
 }
 
 .system-report-card:hover {
-  border-color: red;
+  border-color: rgb(255, 255, 255);
 }
 
 /* Scrollification */
@@ -591,10 +621,11 @@ span.ship-score {
 
 .card-body {
   background-color: #0c0d13;
-  border: 10px solid transparent; /* Définit une bordure sur laquelle l'image sera appliquée */
-  border-image: url("../img/border.png"); /* Remplacez 'votre-image.png' par le chemin de votre image */
-  border-image-slice: 58;
-  padding: 10px;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 4px #fff, inset 0 0 8px #fff, 0 0 16px #f8f4f4,
+    inset 0 0 16px #f8f4f4, 0 0 1px #f8f4f4, inset 0 0 2px #f8f4f4;
 }
 
 .card-body h3,
@@ -609,7 +640,7 @@ span.ship-score {
 
 .modal-body {
   background: black;
-  border: 1px solid red;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 0.375rem;
 }
 
@@ -621,9 +652,9 @@ span.ship-score {
   background-color: black;
   border-bottom: none !important;
 
-  border-top: 1px solid red !important;
-  border-left: 1px solid red !important;
-  border-right: 1px solid red !important;
+  border-top: 1px solid rgb(255, 255, 255) !important;
+  border-left: 1px solid rgb(255, 255, 255) !important;
+  border-right: 1px solid rgb(255, 255, 255) !important;
 }
 
 canvas {
@@ -648,8 +679,9 @@ canvas {
 }
 
 .closed-system {
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
+  background-color: #fdedee;
+  border-color: #ffebed;
+  border-radius: 10px;
 }
 
 .closed-system .card-body {
@@ -676,8 +708,8 @@ canvas {
   --gradient-border: conic-gradient(
     from var(--border-angle),
     transparent 25%,
-    #f00,
-    #f03 99%,
+    rgb(255, 255, 255),
+    rgb(255, 255, 255) 99%,
     transparent
   );
 
@@ -686,6 +718,8 @@ canvas {
   background-position: center center;
 
   animation: bg-spin 5s linear infinite;
+
+  border-radius: 18px;
 }
 
 @keyframes bg-spin {
