@@ -86,26 +86,40 @@
 
     <!-- Baked-in Site Config -->
     <script type="text/javascript">
-      window.siteConfig = {"analytics":{"enabled":false},"mode":"live","live-api-provider":"wss://starblast.dankdmitron.dev/api/","static-api-provider":"https://starblast.dankdmitron.dev/api/","revisionTime":"1736527673"};
+      window.siteConfig = {"analytics":{"enabled":false},"mode":"live","live-api-provider":"wss://starblast.dankdmitron.dev/api/","static-api-provider":"https://starblast.dankdmitron.dev/api/","revisionTime":"1739816186"};
     </script>
   </head>
   <body>
     <div class="modal" tabindex="-1" id="settingsModal" data-nosnippet>
-    <div class="modal-dialog d-flex flex-column min-vh-100 justify-content-center align-items-center">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="form-check ps-0">
-                    <label class="form-check-label" for="preferenceCopyFullLink"><b>Use Full Links</b></label>
-                    <input class="form-check-input float-end" type="checkbox" name="preferenceCopyFullLink" id="preferenceCopyFullLink">
-                </div>
-                <div class="form-check ps-0 ">
-                    <label class="form-check-label" for="preferenceCenterMapAsteroids"><b>Center Map on Asteroid Field</b></label>
-                    <input class="form-check-input float-end" type="checkbox" name="preferenceCopyFullLink" id="preferenceCenterMapAsteroids">
-                </div>
-            </div>
+  <div class="modal-dialog d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="form-check ps-0">
+          <label class="form-check-label" for="preferenceCopyFullLink"><b>Use Full Links</b></label>
+          <input class="form-check-input float-end" type="checkbox" name="preferenceCopyFullLink" id="preferenceCopyFullLink">
         </div>
+        <div class="form-check ps-0 ">
+          <label class="form-check-label" for="preferenceCenterMapAsteroids"><b>Center Map on Asteroid Field</b></label>
+          <input class="form-check-input float-end" type="checkbox" name="preferenceCenterMapAsteroids" id="preferenceCenterMapAsteroids">
+        </div>
+        <hr>
+        <div class="credits text-light">
+          <p>
+            <b>Based on:</b>
+            <a href="https://starblast.dankdmitron.dev/" target="_blank" style="color: white;">serverlist+ by Dankdmitron</a>
+          </p>
+            <b>Uncronwedlist made by: Adonys</b>
+            <b>Contributors: Alex & Troller</b> 
+          <p>
+            <b>Clans & Teams Timeline:</b>
+            <a href="https://starblast-timeline.netlify.app/" target="_blank" style="color: white;">starblast-timeline</a>
+          </p>
+        </div>
+      </div>
     </div>
-</div>  <div class="modal" tabindex="-1" id="spectatorModal" data-nosnippet>
+  </div>
+</div>
+  <div class="modal" tabindex="-1" id="spectatorModal" data-nosnippet>
     <div class="modal-dialog mt-0 modal-xl d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <div class="modal-content">
             <div class="modal-header">
@@ -151,14 +165,15 @@
     <div class="container" data-nosnippet>
       <!-- Navbar -->
       <nav class="navbar" id="navbar">
-        <div class="container-fluid px-0">
+        <div class="px-0" style="display: flex">
           <div class="d-flex flex-column">
             <h1 class="navbar-brand">UncrownedList V1.6</h1>
             <h2 class="text-end pe-3 adonys">BY ADONYS</h2>
           </div>
           <a
-            class="me-2 nav-link nav-icon bi bi-gear-fill"
+            class="me-2 nav-link nav-icon bi bi-info-circle-fill"
             id="navbarSettingsButton"
+            style="margin-top: 3%"
           ></a>
         </div>
       </nav>
