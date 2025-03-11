@@ -41,185 +41,117 @@
 
     <!-- Site JS Libraries -->
 
-    <script src="./js-obf/utils/clans.js"></script>
-    <script src="./js-obf/utils/playerUtils.js"></script>
-    <script src="./js-obf/classes/PlayerInfoCache.js"></script>
+    <script src="./js/utils/clans.js"></script>
+    <script src="./js/utils/playerUtils.js"></script>
+    <script src="./js/classes/PlayerInfoCache.js"></script>
 
     <script
       type="text/javascript"
-      src="./js-obf/classes/PreferencesManager.js"
+      src="./js/classes/PreferencesManager.js"
     ></script>
     <script
       type="text/javascript"
-      src="./js-obf/classes/SimStatusListProvider.js"
+      src="./js/classes/SimStatusListProvider.js"
     ></script>
-    <script type="text/javascript" src="./js-obf/translation.js"></script>
+    <script type="text/javascript" src="./js/translation.js"></script>
     <script
       type="text/javascript"
-      src="./js-obf/classes/SystemListManager.js"
+      src="./js/classes/SystemListManager.js"
     ></script>
     <script
       type="text/javascript"
-      src="./js-obf/classes/SystemReportManager.js"
+      src="./js/classes/SystemReportManager.js"
     ></script>
+    
+    <script type="text/javascript" src="./js/classes/SpectatorV2.js"></script>
+     
 
+    <script type="text/javascript" src="./js/lib/mapGen.js"></script>
+    <script type="text/javascript" src="./js/lib/renderingUtils.js"></script>
+    <script type="text/javascript" src="./js/lib/ecpIcon.js"></script>
+    <script type="text/javascript" src="./js/lib/codemirror.min.js"></script>
     <script
       type="text/javascript"
-      src="./js-obf/classes/SpectatorV2.js"
-    ></script>
-
-    <script type="text/javascript" src="./js-obf/lib/mapGen.js"></script>
-    <script
-      type="text/javascript"
-      src="./js-obf/lib/renderingUtils.js"
-    ></script>
-    <script type="text/javascript" src="./js-obf/lib/ecpIcon.js"></script>
-    <script
-      type="text/javascript"
-      src="./js-obf/lib/codemirror.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./js-obf/lib/codemirror.mode.css.min.js"
+      src="./js/lib/codemirror.mode.css.min.js"
     ></script>
 
     <!-- Baked-in Site Config -->
     <script type="text/javascript">
-      window.siteConfig = {
-        analytics: { enabled: false },
-        mode: "live",
-        "live-api-provider": "wss://starblast.dankdmitron.dev/api/",
-        "static-api-provider": "https://starblast.dankdmitron.dev/api/",
-        revisionTime: "1739971370",
-      };
+      window.siteConfig = {"analytics":{"enabled":false},"mode":"live","live-api-provider":"wss://starblast.dankdmitron.dev/api/","static-api-provider":"https://starblast.dankdmitron.dev/api/","revisionTime":"1741709983"};
     </script>
   </head>
   <body>
     <div class="modal" tabindex="-1" id="settingsModal" data-nosnippet>
-      <div
-        class="modal-dialog d-flex flex-column min-vh-100 justify-content-center align-items-center"
-      >
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="form-check ps-0">
-              <label class="form-check-label" for="preferenceCopyFullLink"
-                ><b>Use Full Links</b></label
-              >
-              <input
-                class="form-check-input float-end"
-                type="checkbox"
-                name="preferenceCopyFullLink"
-                id="preferenceCopyFullLink"
-              />
-            </div>
-            <div class="form-check ps-0">
-              <label class="form-check-label" for="preferenceCenterMapAsteroids"
-                ><b>Center Map on Asteroid Field</b></label
-              >
-              <input
-                class="form-check-input float-end"
-                type="checkbox"
-                name="preferenceCenterMapAsteroids"
-                id="preferenceCenterMapAsteroids"
-              />
-            </div>
-            <hr />
-            <div class="credits text-light">
-              <p>
-                <b>Based on:</b>
-                <a
-                  href="https://starblast.dankdmitron.dev/"
-                  target="_blank"
-                  style="color: white"
-                  >serverlist+ by Dankdmitron</a
-                >
-              </p>
-              <b>Uncronwedlist made by: Adonys</b>
-              <b>Contributors: Alex & Troller</b>
-              <p>
-                <b>Clans & Teams Timeline:</b>
-                <a
-                  href="https://starblast-timeline.netlify.app/"
-                  target="_blank"
-                  style="color: white"
-                  >starblast-timeline</a
-                >
-              </p>
-            </div>
-          </div>
+  <div class="modal-dialog d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="form-check ps-0">
+          <label class="form-check-label" for="preferenceCopyFullLink"><b>Use Full Links</b></label>
+          <input class="form-check-input float-end" type="checkbox" name="preferenceCopyFullLink" id="preferenceCopyFullLink">
+        </div>
+        <div class="form-check ps-0 ">
+          <label class="form-check-label" for="preferenceCenterMapAsteroids"><b>Center Map on Asteroid Field</b></label>
+          <input class="form-check-input float-end" type="checkbox" name="preferenceCenterMapAsteroids" id="preferenceCenterMapAsteroids">
+        </div>
+        <hr>
+        <div class="credits text-light">
+          <p>
+            <b>Based on:</b>
+            <a href="https://starblast.dankdmitron.dev/" target="_blank" style="color: white;">serverlist+ by Dankdmitron</a>
+          </p>
+            <b>Uncronwedlist made by: Adonys</b>
+            <b>Contributors: Alex & Troller</b> 
+          <p>
+            <b>Clans & Teams Timeline:</b>
+            <a href="https://starblast-timeline.netlify.app/" target="_blank" style="color: white;">starblast-timeline</a>
+          </p>
         </div>
       </div>
     </div>
-    <div class="modal" tabindex="-1" id="spectatorModal" data-nosnippet>
-      <div
-        class="modal-dialog mt-0 modal-xl d-flex flex-column min-vh-100 justify-content-center align-items-center"
-      >
+  </div>
+</div>
+  <div class="modal" tabindex="-1" id="spectatorModal" data-nosnippet>
+    <div class="modal-dialog mt-0 modal-xl d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="spectatorModalTitle">
-              Spectating: ???
-            </h5>
-          </div>
-          <div class="modal-body">
-            <div class="row" id="spectateRow">
-              <div class="col-sm-6 px-0">
-                <canvas id="spectatorCanvas"></canvas>
-              </div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="spectatorModalTitle">Spectating: ???</h5>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal" tabindex="-1" id="shareGameModal" data-nosnippet>
-      <div
-        class="modal-dialog d-flex flex-column min-vh-100 justify-content-center align-items-center"
-      >
-        <div class="modal-content">
-          <div class="modal-body">
-            <h5 class="text-center">Share Custom Game</h5>
-            <label for="customGameLinkInput" class="d-none"></label>
-            <div class="input-group">
-              <input
-                type="text"
-                id="customGameLinkInput"
-                class="form-control"
-                autocomplete="off"
-                autocapitalize="off"
-                placeholder="https://starblast.io/#1234@123.123.123.123"
-              />
-              <button class="btn btn-danger" id="shareCustomGame">
-                <i class="bi bi-arrow-bar-right"></i>
-              </button>
+            <div class="modal-body">
+                <div class="row" id="spectateRow">
+                    <div class="col-sm-6 px-0">
+                        <canvas id="spectatorCanvas"></canvas>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-    <div class="modal" id="customThemeEditorModal" tabindex="-1" data-nosnippet>
-      <div
-        class="modal-dialog modal-lg d-flex flex-column min-vh-100 justify-content-center align-items-center"
-      >
+</div>  <div class="modal" tabindex="-1" id="shareGameModal" data-nosnippet>
+    <div class="modal-dialog d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <div class="modal-content">
-          <div class="modal-body">
-            <h5 class="text-center">Custom Theme Editor</h5>
-            <p class="text-center" style="margin-bottom: 0">
-              Changes will automatically save and take effect
-            </p>
-            Name:
-            <input
-              type="text"
-              id="customThemeName"
-              class="form-control"
-              autocomplete="off"
-              autocapitalize="off"
-              placeholder="Your theme name"
-            />
-            Code:
-            <textarea id="customThemeText"></textarea>
-          </div>
+            <div class="modal-body">
+                <h5 class="text-center">Share Custom Game</h5>
+                <label for="customGameLinkInput" class="d-none"></label>
+                <div class="input-group">
+                    <input type="text" id="customGameLinkInput" class="form-control" autocomplete="off" autocapitalize="off" placeholder="https://starblast.io/#1234@123.123.123.123">
+                    <button class="btn btn-danger" id="shareCustomGame"><i class="bi bi-arrow-bar-right"></i></button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+</div> <div class="modal" id="customThemeEditorModal" tabindex="-1" data-nosnippet>
+    <div class="modal-dialog modal-lg d-flex flex-column min-vh-100 justify-content-center align-items-center">
+        <div class="modal-content">
+        	<div class="modal-body">
+            	<h5 class="text-center">Custom Theme Editor</h5>
+            	<p class="text-center" style="margin-bottom: 0;">Changes will automatically save and take effect</p>
+				Name:
+				<input type="text" id="customThemeName" class="form-control" autocomplete="off" autocapitalize="off" placeholder="Your theme name">
+            	Code:
+            	<textarea id="customThemeText"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="container" data-nosnippet>
       <!-- Navbar -->
@@ -523,7 +455,7 @@
     </div>
 
     <!-- Site JS Scripts -->
-    <script type="text/javascript" src="./js-obf/ui.js"></script>
-    <script type="text/javascript" src="./js-obf/serverList.js"></script>
+    <script type="text/javascript" src="./js/ui.js"></script>
+    <script type="text/javascript" src="./js/serverList.js"></script>
   </body>
 </html>
