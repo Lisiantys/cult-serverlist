@@ -1,26 +1,27 @@
 body {
-    color-scheme: light;
+  color-scheme: light;
 }
 
 :root {
-    --spectate-background-color: transparent;
-    --spectate-asteroids-color: black;
-    --spectate-player-highlighting-color: black;
-    --spectate-leaderboard-highlighting-color: yellow;
-    --text-color: #0d1d31;
-    --ship-icons-filter: invert(1);
+  --spectate-background-color: transparent;
+  --spectate-asteroids-color: black;
+  --spectate-player-highlighting-color: black;
+  --spectate-leaderboard-highlighting-color: yellow;
+  --text-color: #0d1d31;
+  --ship-icons-filter: invert(1);
+  --color-theme: rgb(238, 238, 238);
 }
 
 ::-webkit-scrollbar {
-    width: 0.1rem;
+  width: 0.1rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #cccccc;
-    border-radius: 0.25rem;
-    border: 0.25rem solid #cccccc;
+  background-color: #cccccc;
+  border-radius: 0.25rem;
+  border: 0.25rem solid #cccccc;
 }

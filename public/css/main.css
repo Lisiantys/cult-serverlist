@@ -11,9 +11,54 @@
   font-display: swap;
 }
 
+.ship-icon {
+  font-family: "SBGlyphs", sans-serif;
+  font-size: 18px;
+}
+
+@font-face {
+  font-family: "Starblast Vanilla Ships";
+  src: url("../fonts/Starblast/starblast-vanilla-ships.ttf");
+  font-display: swap;
+}
+
+.ship-icon-vanilla {
+  font-family: "Starblast Vanilla Ships", sans-serif;
+}
+
+@font-face {
+  font-family: "Starblast Intrusion Ships";
+  src: url("../fonts/Starblast/starblast-intrusion-ships.ttf");
+  font-display: swap;
+}
+
+.ship-icon-intrusion {
+  font-family: "Starblast Intrusion Ships", sans-serif;
+}
+
+@font-face {
+  font-family: "Starblast U-Series Ships";
+  src: url("../fonts/Starblast/starblast-useries-ships.ttf");
+  font-display: swap;
+}
+
+.ship-icon-useries {
+  font-family: "Starblast U-Series Ships", sans-serif;
+}
+
+@font-face {
+  font-family: "Starblast Nautic Ships";
+  src: url("../fonts/Starblast/starblast-nautic-ships.ttf");
+  font-display: swap;
+}
+
+.ship-icon-nautic {
+  font-family: "Starblast Nautic Ships", sans-serif;
+}
+
 * {
   scrollbar-width: thin;
-  scrollbar-color: white transparent;
+  scrollbar-color: var(--color-theme) transparent;
   /* Supprimer les flèches des barres de défilement */
 }
 *::-webkit-scrollbar {
@@ -24,12 +69,12 @@
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: var(--color-theme);
   border-radius: 10px;
   border: 2px solid transparent;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background-color: white;
+  background-color: var(--color-theme);
 }
 *::-webkit-scrollbar-button {
   display: none;
@@ -37,8 +82,20 @@
 
 /* Text Styling */
 
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Noir avec une opacité de 50% */
+  z-index: -1; /* Place l'overlay sous tous les éléments */
+}
+
 body {
   min-height: 100vh;
+  height: 100vh;
   min-width: 100vw;
   background-image: url("../img/wall.jpg");
   background-size: cover; /* Couvre toute la zone sans déformation */
@@ -535,13 +592,13 @@ label {
 }
 
 .form-check {
-  color: white;
+  color: var(--color-theme);
 }
 
 /* System List Styling */
 
 .system-list-item:hover {
-  border-color: rgb(255, 255, 255);
+  border-color: var(--color-theme);
   cursor: pointer;
 }
 
@@ -554,7 +611,7 @@ label {
 }
 
 .system-report-card:hover {
-  border-color: rgb(255, 255, 255);
+  border-color: var(--color-theme);
 }
 
 /* Scrollification */
@@ -604,7 +661,7 @@ span.ship-score {
 
 .player-view-box:hover,
 .highlighted {
-  cursor: pointer;
+  user-select: none;
   color: var(--spectate-leaderboard-highlighting-color);
 }
 
@@ -622,10 +679,11 @@ span.ship-score {
 .card-body {
   background-color: #0c0d13;
   padding: 20px;
-  border: 2px solid #fff;
+  border: 2px solid var(--color-theme);
   border-radius: 12px;
-  box-shadow: 0 0 4px #fff, inset 0 0 8px #fff, 0 0 16px #f8f4f4,
-    inset 0 0 16px #f8f4f4, 0 0 1px #f8f4f4, inset 0 0 2px #f8f4f4;
+  box-shadow: 0 0 4px var(--color-theme), inset 0 0 8px var(--color-theme),
+    0 0 16px var(--color-theme), inset 0 0 16px var(--color-theme),
+    0 0 1px var(--color-theme), inset 0 0 2px var(--color-theme);
 }
 
 .card-body h3,
@@ -640,25 +698,25 @@ span.ship-score {
 
 .modal-body {
   background: black;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid var(--color-theme);
   border-radius: 0.375rem;
 }
 
 .modal-body #spectateRow {
-  color: white;
+  color: var(--color-theme);
 }
 
 .modal-header {
   background-color: black;
   border-bottom: none !important;
 
-  border-top: 1px solid rgb(255, 255, 255) !important;
-  border-left: 1px solid rgb(255, 255, 255) !important;
-  border-right: 1px solid rgb(255, 255, 255) !important;
+  border-top: 1px solid var(--color-theme) !important;
+  border-left: 1px solid var(--color-theme) !important;
+  border-right: 1px solid var(--color-theme) !important;
 }
 
 canvas {
-  background-color: white;
+  background-color: grey;
   border-radius: 0.375rem;
 }
 
@@ -679,8 +737,8 @@ canvas {
 }
 
 .closed-system {
-  background-color: #fdedee;
-  border-color: #ffebed;
+  background-color: var(--color-theme);
+  border-color: var(--color-theme);
   border-radius: 10px;
 }
 
@@ -708,8 +766,8 @@ canvas {
   --gradient-border: conic-gradient(
     from var(--border-angle),
     transparent 25%,
-    rgb(255, 255, 255),
-    rgb(255, 255, 255) 99%,
+    var(--color-theme),
+    var(--color-theme) 99%,
     transparent
   );
 
@@ -720,6 +778,10 @@ canvas {
   animation: bg-spin 5s linear infinite;
 
   border-radius: 18px;
+}
+
+.modal-content {
+  width: 110%;
 }
 
 @keyframes bg-spin {
