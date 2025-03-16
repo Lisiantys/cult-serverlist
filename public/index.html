@@ -86,7 +86,7 @@
 
     <!-- Baked-in Site Config -->
     <script type="text/javascript">
-      window.siteConfig = {"analytics":{"enabled":false},"mode":"live","live-api-provider":"wss://starblast.dankdmitron.dev/api/","static-api-provider":"https://starblast.dankdmitron.dev/api/","revisionTime":"1741725296"};
+      window.siteConfig = {"analytics":{"enabled":false},"mode":"live","live-api-provider":"wss://starblast.dankdmitron.dev/api/","static-api-provider":"https://starblast.dankdmitron.dev/api/","revisionTime":"1741995834"};
     </script>
   </head>
   <body>
@@ -161,13 +161,32 @@
         </div>
     </div>
 </div>
+ <div class="modal" tabindex="-1" id="survivalSpectatorModal" data-nosnippet>
+  <div
+    class="modal-dialog mt-0 modal-xl d-flex flex-column min-vh-100 justify-content-center align-items-center"
+  >
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- Utilisez un ID distinct pour le titre survival -->
+        <h5 class="modal-title" id="survivalSpectatorModalTitle">
+          Survival: ???
+        </h5>
+      </div>
+      <div class="modal-body">
+        <div class="row" id="survivalSpectateRow">
+          <!-- Le contenu sera injecté ici pour le mode survival -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div class="container" data-nosnippet>
       <!-- Navbar -->
       <nav class="navbar" id="navbar">
         <div class="px-0" style="display: flex">
           <div class="d-flex flex-column">
-            <h1 class="navbar-brand">UncrownedList V1.7</h1>
+            <h1 class="navbar-brand">UncrownedList V1.7.5</h1>
             <h2 class="text-end pe-3 adonys">BY ADONYS</h2>
           </div>
           <a
@@ -383,6 +402,14 @@
               </div>
             </div>
           </div>
+          <button
+            class="btn btn-outline-light"
+            id="systemSurvivalSpectateButton"
+            style="display: block"
+          >
+            <i class="bi bi-eye-fill"></i>
+            Survival Leaderboard
+          </button>
         </div>
 
         <div class="system-report-card py-3">
@@ -462,6 +489,7 @@
       <div class="star"></div>
       <div class="star"></div>
     </div>
+
     <!-- Site JS Scripts -->
     <script type="text/javascript" src="./js-obf/ui.js"></script>
     <script type="text/javascript" src="./js-obf/serverList.js"></script>
