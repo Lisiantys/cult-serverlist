@@ -27,11 +27,11 @@
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="./css/main.css" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.64.0/theme/monokai.min.css"
     />
-    <link rel="stylesheet" href="./css/codemirror.min.css" />
+    <link rel="stylesheet" href="./css/codemirror.min.css" /> -->
     <link
       rel="stylesheet"
       href="./css/themes/default_light.css"
@@ -41,49 +41,8 @@
 
     <!-- Site JS Libraries -->
 
-    <script src="./js-obf/utils/clans.js"></script>
-    <script src="./js-obf/utils/playerUtils.js"></script>
-    <script src="./js-obf/classes/PlayerInfoCache.js"></script>
-
-    <script
-      type="text/javascript"
-      src="./js-obf/classes/PreferencesManager.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./js-obf/classes/SimStatusListProvider.js"
-    ></script>
-    <script type="text/javascript" src="./js-obf/translation.js"></script>
-    <script
-      type="text/javascript"
-      src="./js-obf/classes/SystemListManager.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./js-obf/classes/SystemReportManager.js"
-    ></script>
-    <% if (site.mode === "live") { %>
-    <script
-      type="text/javascript"
-      src="./js-obf/classes/SpectatorV2.js"
-    ></script>
-    <% } %> <% if (site.analytics.enabled) { %> <%- include("./index/analytics")
-    %> <% } %>
-
-    <script type="text/javascript" src="./js-obf/lib/mapGen.js"></script>
-    <script
-      type="text/javascript"
-      src="./js-obf/lib/renderingUtils.js"
-    ></script>
-    <script type="text/javascript" src="./js-obf/lib/ecpIcon.js"></script>
-    <script
-      type="text/javascript"
-      src="./js-obf/lib/codemirror.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./js-obf/lib/codemirror.mode.css.min.js"
-    ></script>
+    <% if (site.mode === "live") { %> <% } %> <% if (site.analytics.enabled) {
+    %> <%- include("./index/analytics") %> <% } %>
 
     <!-- Baked-in Site Config -->
     <script type="text/javascript">
@@ -403,9 +362,6 @@
       <div class="star"></div>
       <div class="star"></div>
     </div>
-
-    <!-- Site JS Scripts -->
-    <script type="text/javascript" src="./js-obf/ui.js"></script>
-    <script type="text/javascript" src="./js-obf/serverList.js"></script>
+    <script type="text/javascript" src="../dist/bootstrap.js"></script>
   </body>
 </html>
