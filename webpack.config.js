@@ -32,15 +32,11 @@ module.exports = {
     plugins: [
         new WebpackObfuscator(
             {
-                // Obfuscation des chaînes en RC4
                 rotateStringArray: true,
                 stringArray: true,
+
                 stringArrayEncoding: ['rc4'],
                 stringArrayThreshold: 1, // Toutes les chaînes sont obfusquées
-
-                // Contrôle de flux très agressif (technique VM-based)
-                controlFlowFlattening: true,
-                controlFlowFlatteningThreshold: 1,
 
                 // Protection contre le débogage
                 debugProtection: true,
@@ -50,9 +46,8 @@ module.exports = {
                 disableConsoleOutput: true,
                 selfDefending: true,
 
-                // Renommage global et transformation des clés d'objet
+                // // Renommage global et transformation des clés d'objet
                 renameGlobals: true,
-                transformObjectKeys: true,
 
                 deadCodeInjection: false,
             },
