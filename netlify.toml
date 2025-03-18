@@ -1,7 +1,7 @@
 [build]
   base    = "/"
-  publish = "public"
-  command = "npm run build" # Laisse vide si aucun build n'est nécessaire ou mets `npm run build` si tu as une étape de build.
+  publish = "dist"
+  command = "npm run build"
 
 # Si tu utilises des fonctions Netlify :
 [functions]
