@@ -5,8 +5,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bootstrap.js',
-        path: path.resolve(__dirname, 'public'),
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'public/js-obf'),
     },
     mode: 'production',
     optimization: {
