@@ -3,26 +3,26 @@ const WebpackObfuscator = require('webpack-obfuscator');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js', // Fichier principal
+    entry: './src/index.js',
     output: {
-        filename: 'bootstrap.js', // Fichier final unique
-        path: path.resolve(__dirname, 'dist'),
+        filename: 'bootstrap.js',
+        path: path.resolve(__dirname, 'public'),
     },
-    mode: 'production', // Optimisations de production (minification, tree-shaking, etc.)
+    mode: 'production',
     optimization: {
         minimize: true,
-        splitChunks: false, // Un seul fichier de sortie
+        splitChunks: false,
         minimizer: [
             new TerserPlugin({
                 terserOptions: {
                     compress: {
-                        drop_console: true,   // Supprime les appels à console.*
-                        drop_debugger: true,    // Supprime les instructions debugger
-                        pure_funcs: ['console.log', 'console.info', 'console.debug']
+                        drop_console: true,
+                        drop_debugger: true,
+                        pure_funcs: ['console.log', 'console.info', 'console.debug'],
                     },
                     mangle: true,
                     output: {
-                        comments: false,      // Retire tous les commentaires
+                        comments: false,
                     },
                 },
                 extractComments: false,
